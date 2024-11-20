@@ -8,7 +8,7 @@ const UserAccountStatus = () => {
     // Create an async function to handle the API call
     const fetchAccountStatus = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/UserAccount/viewaccountstatus", { withCredentials: true });
+        const response = await axios.get("https://dhanproduction.vercel.app/api/UserAccount/viewaccountstatus", { withCredentials: true });
         // Assuming the response returns an array of accounts in `response.data`
         setAccount(response.data || []); // Adjust based on the actual response structure
       } catch (err) {
