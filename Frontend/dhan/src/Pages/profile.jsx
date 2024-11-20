@@ -18,7 +18,7 @@ const UserProfile = () => {
     // Fetch user profile data on component mount
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/UserAccount/profile', { withCredentials: true });
+        const response = await axios.get('https://dhanproduction.vercel.app/api/UserAccount/profile', { withCredentials: true });
         setUser(response.data.details);
       } catch (err) {
         setError('Could not fetch profile. Please log in again.');
