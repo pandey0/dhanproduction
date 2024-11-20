@@ -35,7 +35,7 @@ const CreateBankAccountForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:9000/api/UserAccount/createbankaccount", // Backend route for account creation
+        "https://dhanproduction.vercel.app/api/UserAccount/createbankaccount", // Backend route for account creation
         formData,{withCredentials: true});
 
       setMessage(response.data.message); // Success message from server
