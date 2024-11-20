@@ -9,7 +9,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       console.log("Logging out...");
-      const logout = await axios.get("http://localhost:9000/api/userauth/signout");
+      const logout = await axios.get("https://dhanproduction.vercel.app/api/userauth/signout");
       if (logout.status === 200) {
         // Clear local storage or session storage if you are using it for authentication
         localStorage.removeItem('token'); // Optional: if you're storing token in localStorage
