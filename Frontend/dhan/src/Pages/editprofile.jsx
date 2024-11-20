@@ -18,7 +18,7 @@ const EditProfile = () => {
     // Fetch user profile to populate the form
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/UserAccount/profile', { withCredentials: true });
+        const response = await axios.get('https://dhanproduction.vercel.app/api/UserAccount/profile', { withCredentials: true });
         setUser(response.data.details);  // Assuming the response contains the profile details
         setLoading(false);
       } catch (err) {
@@ -37,7 +37,7 @@ const EditProfile = () => {
 
     try {
       // Send updated user data in the PUT request
-      const response = await axios.put('http://localhost:9000/api/UserAccount/editprofile', user, {
+      const response = await axios.put('https://dhanproduction.vercel.app/api/UserAccount/editprofile', user, {
         withCredentials: true  // Ensures that cookies/session are sent with the request
       });
       setIsUpdated(true);
