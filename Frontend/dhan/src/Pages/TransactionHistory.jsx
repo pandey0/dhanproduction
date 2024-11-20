@@ -16,7 +16,7 @@ const TransactionHistory = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:9000/api/UserAccount/previoustransactions/${id}`,
+          `https://dhanproduction.vercel.app/api/UserAccount/previoustransactions/${id}`,
           { withCredentials: true }
         );
         setTransactions(response.data.transactions);
