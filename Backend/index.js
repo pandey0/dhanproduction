@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 var cors = require('cors')
 app.use(cors({
-    origin: 'http://localhost:5173', // replace with your React app's origin
+    origin: 'https://dhanproduction-front.vercel.app/', // replace with your React app's origin
     credentials: true, // Allow cookies to be sent
   }));
 
