@@ -13,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/UserAccount/myaccounts", {
+        const response = await axios.get("https://dhanproduction.vercel.app/api/UserAccount/myaccounts", {
           withCredentials: true,
         });
 
