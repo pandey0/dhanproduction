@@ -14,7 +14,7 @@ const DepositPage = () => {
   // Function to get all accounts
   const getaccountid = async () => {
     try {
-      const response = await axios.get("http://localhost:9000/api/UserAccount/myapprovedaccountsid", {
+      const response = await axios.get("https://dhanproduction.vercel.app/api/UserAccount/myapprovedaccountsid", {
         withCredentials: true,
       });
 
