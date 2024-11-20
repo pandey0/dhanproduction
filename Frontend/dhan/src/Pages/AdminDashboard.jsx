@@ -14,7 +14,7 @@ const AdminDashboard = () => {
   const [showDocument, setShowDocument] = useState(false);
   const navigate = useNavigate();
 
-  const BASE_URL = "http://localhost:9000/api/AdminAccount";
+  const BASE_URL = "https://dhanproduction.vercel.app/api/AdminAccount";
 
   useEffect(() => {
     axios
