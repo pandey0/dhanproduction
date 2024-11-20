@@ -19,7 +19,7 @@ const PaymentForm = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:9000/api/UserAccount/getaccount/${id}`,{withCredentials:true})
+        .get(`https://dhanproduction.vercel.app/api/UserAccount/getaccount/${id}`,{withCredentials:true})
         .then((response) => {
           console.log("this is the responce:",response.data.accounts[0])
           setAccount(response.data.accounts[0]); // Set sender's account data
@@ -35,7 +35,7 @@ const PaymentForm = ({ isOpen, onClose }) => {
     if (toid) {
       console.log("to number",toid)
       axios
-        .get(`http://localhost:9000/api/UserAccount/getaccount/${toid}`,{withCredentials:true})
+        .get(`https://dhanproduction.vercel.app/api/UserAccount/getaccount/${toid}`,{withCredentials:true})
         .then((response) => {
           setRecipientAccount(response.data.accounts[0]); // Set recipient account data
         })
@@ -78,7 +78,7 @@ const PaymentForm = ({ isOpen, onClose }) => {
 
     try {
       // Use axios to send transaction data to the backend
-      const response = await axios.post('http://localhost:9000/api/Transaction/transfer', transactionData,{withCredentials:true});
+      const response = await axios.post('https://dhanproduction.vercel.app/api/Transaction/transfer', transactionData,{withCredentials:true});
 
       if (response.status === 200) {
         // Transaction successful
