@@ -23,7 +23,7 @@ const adminlogin = () => {
   const handleRegister = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/api/Adminauth/signup", { email, password, name });
+      const response = await axios.post("https://dhanproduction.vercel.app/api/Adminauth/signup", { email, password, name });
       if (response.status === 200) {
         // Show success notification
         setNotification("Registration successful! You can now log in.");
@@ -40,7 +40,7 @@ const adminlogin = () => {
   const handleadminlogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/api/Adminauth/signin", { email, password }, { withCredentials: true });
+      const response = await axios.post("https://dhanproduction.vercel.app/api/Adminauth/signin", { email, password }, { withCredentials: true });
       if (response.status === 200) {
         navigate('/admindashboard', { replace: true });
       }
