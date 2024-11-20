@@ -11,7 +11,7 @@ const SuccessfulTransaction = () => {
   useEffect(() => {
     const fetchTransactionDetail = async () => {
       try {
-        const response = await axios.get(`https://localhost:9000/api/Useraccount/transactionscompletion/${id}`, { withCredentials: true });
+        const response = await axios.get(`https://dhanproduction.vercel.app/api/Useraccount/transactionscompletion/${id}`, { withCredentials: true });
         setTransactionDetail(response.data); // Set the response data to the state
       } catch (error) {
         setError('Failed to fetch transaction details.');
