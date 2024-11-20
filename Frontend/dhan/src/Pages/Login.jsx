@@ -23,7 +23,7 @@ const Login = () => {
   const handleRegister = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/api/Userauth/signup", { email, password, name, phone, address });
+      const response = await axios.post("https://dhanproduction.vercel.app/api/Userauth/signup", { email, password, name, phone, address });
       if (response.status === 200) {
         // Show success notification
         setNotification("Registration successful! You can now log in.");
@@ -40,7 +40,7 @@ const Login = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/api/userauth/signin", { email, password }, { withCredentials: true });
+      const response = await axios.post("https://dhanproduction.vercel.app/api/userauth/signin", { email, password }, { withCredentials: true });
       if (response.status === 200) {
         navigate('/userdashboard', { replace: true });
       }
