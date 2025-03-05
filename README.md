@@ -17,7 +17,7 @@ The Dhan Bank application is a modern, scalable, and secure digital banking syst
 ### 2. Architecture Overview
 
 - **Frontend**: ReactJS, TailwindCSS for styling. Modular components provide flexibility for future updates.
-- **Backend**: Built with Node.js and Express.js, using REST APIs for transaction processing, account management, and more. MongoDB is used for data storage, while Redis ensures fast access to frequently used data.
+- **Backend**: Built with Node.js and Express.js, using REST APIs for transaction processing, account management, and more. MongoDB is used for data storage.
 - **Microservices**: The app is built with a microservices architecture to allow scaling and independent service management. 
 - **Authentication & Authorization**: JWT (JSON Web Tokens) for secure login and token-based access.
 
